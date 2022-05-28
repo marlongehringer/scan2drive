@@ -19,6 +19,8 @@ function start() {
 	    // The “profile” and “email” scope are always requested.
 	    // See also https://developers.google.com/drive/api/v2/about-auth
 	    scope: 'https://www.googleapis.com/auth/drive.file',
+	    // Enable old authentication api, TODO: only possible until 29.07.2022
+	    plugin_name: 'scan2drive',
         });
         auth2.then(function() {
 	    user = auth2.currentUser.get();
