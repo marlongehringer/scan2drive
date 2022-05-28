@@ -112,7 +112,7 @@ func scan1(tr trace.Trace, cl *airscan.Client, ingester *scaningest.Ingester) (s
 	settings := preset.GrayscaleA4ADF()
 	// For the ADF, the ScanSnap is better.
 	// We use the Brother for its flatbed scan only.
-	settings.InputSource = "Platen"
+	settings.InputSource = "Feeder"
 	scan, err := cl.Scan(settings)
 	if err != nil {
 		return "", err
